@@ -1,0 +1,70 @@
+:root {
+  /* -- Custom Properties -- */
+  --clr-dark: rgb(20, 20, 20);
+  --clr-light: #fff7eb;
+
+  --clr-primary-glare: #ebc1c6;
+
+  --clr-secondary: hsl(246, 14%, 27%);
+  --clr-secondary-shade: hsl(245, 100%, 12%);
+
+  --clr-tertiary: #5a7d7c;
+  --clr-tertiary-shade: #496766;
+
+  --ff-base: "Georgia, serif";
+  --ff-headings: "Eczar", "Times New Roman", serif;
+
+  --fw-medium: 500;
+  --fw-bold: 800;
+
+  --lh-body: 1.5;
+  --lh-headings: 1.2;
+
+  --measure-compact: 16ch;
+  --measure-longform: 65ch;
+
+  /* REM sizes 16px base for scaling 
+       the scaling assumes the browser default value of 16px
+       if the the browser default has been changed
+       OR
+       if the font-size is set in the 'html' or ':root' tags
+       the scaling will be relative to that value
+       i.e. html {font-size: 1.25rem}, scale is relative to 1rem = 1.25rem
+  */
+  --rs-04: 0.25rem;
+  --rs-08: 0.5rem;
+  --rs-13: 0.8rem;
+  --rs-16: 1rem;
+  --rs-20: 1.25rem;
+  --rs-25: 1.5625rem;
+  --rs-32: 2rem;
+  --rs-40: 2.5rem;
+  --rs-48: 3rem;
+  --rs-60: 3.75rem;
+}
+
+/* -- Resets -- */
+html {
+  box-sizing: border-box;
+
+  /* this becomes the basis for all REM measures */
+  font-size: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+picture {
+  --flow-space: 0;
+
+  display: block;
+  max-width: 100%;
+}
+
+img:not([alt]) {
+  filter: blur(10px);
+}

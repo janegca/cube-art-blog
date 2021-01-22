@@ -1,0 +1,47 @@
+/* ender class
+    styles for the coloured, skewed blocks
+*/
+.ender {
+  --ender-depth: 4rem;
+
+  position: relative;
+
+  padding: 1.95rem 0;
+  margin-top: calc(var(--ender-depth) * 1.5) !important;
+  margin-bottom: calc(var(--ender-depth) * 1.5) !important;
+
+  background: var(--ender-color);
+}
+
+.ender::before,
+.ender::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  padding-top: var(--ender-depth);
+
+  background: var(--ender-color);
+  clip-path: polygon(100% 0%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.ender:before {
+  transform: translateY(1px);
+  bottom: 100%;
+}
+
+.ender::after {
+  transform: rotate(180deg) translateY(1px);
+  top: 100%;
+}
+
+/* Set block colour */
+.ender:not([class*="ender-color"]) {
+  --ender-color: var(--clr-primary-glare);
+}
+
+.ender-color-secondary {
+  --ender-color: var(--clr-secondary);
+}

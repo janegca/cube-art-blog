@@ -1,0 +1,19 @@
+/* gallery class
+    styles the images in the ender blocks
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--rs-20);
+  align-items: stretch;
+}
+
+.gallery > img {
+  object-fit: cover;
+}
+
+@media (min-width: 48em) {
+  .gallery[data-style="fill"] {
+    grid-template-columns: 1fr 2fr;
+  }
+}

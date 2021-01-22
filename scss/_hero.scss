@@ -1,0 +1,46 @@
+/* Hero class 
+    styling for hero class
+ */
+.hero {
+  position: relative;
+  padding: 20rem 0 0 0;
+}
+
+.hero,
+.hero + * {
+  --flow-space: var(--rs-48);
+}
+
+.hero .wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .wrapper > figcaption {
+  max-width: var(--measure-compact);
+  padding: 1rem;
+
+  font-family: var(--ff-headings);
+  font-size: var(--fs-32);
+  font-weight: var(--fw-bold);
+  color: var(--clr-tertiary-shade);
+
+  background: rgba(255, 248, 237, 0.8);
+  backdrop-filter: blur(2px);
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+@media (min-width: 48em) {
+  .hero {
+    font-size: var(--rs-40);
+  }
+}
