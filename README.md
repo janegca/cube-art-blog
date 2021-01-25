@@ -41,6 +41,6 @@ from the following files found in the `scss` directory:
 - \_base: contains the Custom Properties and any element resets
 - \_global: general 'tag' (body, h1-h6, a, etc.) styling
 
-- \_ender: class, styles the coloured, skewed, blocks
+- \_ender: class, styles the coloured skewed blocks
 - \_gallery: class, styles the images in the skewed blocks
 - \_hero: class, styles the hero image and caption found at the end of the page
